@@ -1,4 +1,6 @@
-$: << File.expand_path("~/Work/p4/zss/src/ParseTree/dev/lib") # for me, not you.
+l = File.expand_path("~/Work/p4/zss/src/ParseTree/dev/lib")
+$: << l if File.exist?(l) # ruby_parser on windows breaks here else
+
 require 'sexp'
 require 'ruby_parser_extras'
 
